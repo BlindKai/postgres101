@@ -1,0 +1,29 @@
+{
+  "name": "postgresql101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "migrate:make": "knex --knexfile src/database/knex.config.ts migrate:make",
+    "migrate:latest": "knex --knexfile src/database/knex.config.ts migrate:latest",
+    "migrate:rollback": "knex --knexfile src/database/knex.config.ts migrate:rollback --all",
+    "seed:make": "knex --knexfile src/database/knex.config.ts seed:make",
+    "seed:run": "knex --knexfile src/database/knex.config.ts seed:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^28.1.7",
+    "@types/pg": "^8.6.5",
+    "jest": "^28.1.3",
+    "ts-jest": "^28.0.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "knex": "^2.2.0",
+    "pg": "^8.7.3"
+  }
+}
